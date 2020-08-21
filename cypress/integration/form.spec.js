@@ -10,6 +10,14 @@ describe('Add text to name', () => {
 
 })
 
+describe('Select Size', () => {
+ it('select size Large', () => {
+     cy.get('select').select('Large')
+     .should('have.value', 'Large')
+})
+
+})
+
 describe('Select Toppings', () => {
     it('mark pepperoni box', () => {
         cy.get('input[name="pepperoni"]')
