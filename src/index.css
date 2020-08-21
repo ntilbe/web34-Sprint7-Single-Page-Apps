@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-image: linear-gradient(40deg, #ff0844 0%, #ffb199 100%); */
+  
 }
 
 code {
@@ -76,11 +77,17 @@ code {
   opacity: 1;
 }
 
+.imageContainer:hover .pizza-background {
+  opacity: 1;
+}
+
 .pizza-btn{
-  background-color: #4CAF50;
+  background-color: crimson;
   color: white;
   font-size: 16px;
   padding: 16px 32px;
+  position: relative;
+  z-index: 2;
 }
 
 .image{
@@ -90,4 +97,6 @@ code {
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
+  z-index: -1;
 }
+
