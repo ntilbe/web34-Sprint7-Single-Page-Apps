@@ -7,6 +7,7 @@ const Form = (props) => {
         submit,
         inputChange,
         checkboxChange,
+        disabled,
         formErrors
     } = props
 
@@ -96,9 +97,10 @@ const Form = (props) => {
                     type='text'
                 />
             </label>
-            <button className='submit-btn'>Submit</button>
+            <button className='submit-btn' disabled={disabled}>Submit</button>
             <div className='errors'>
                 <div>{formErrors.name}</div>
+                <div>{formErrors.size}</div>
             </div>
 
         </form>

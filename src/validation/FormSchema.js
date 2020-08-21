@@ -9,20 +9,20 @@ const FormSchema = yup.object().shape({
         .string()
         .min(3, "Password must be at least 3 characters")
         .required("Password is Required"),
-    pepperoni: yup
-        .boolean()
-        .oneOf([true], "You must accept Terms and Conditions"),
-    olives: yup
-        .boolean()
-        .oneOf([true], "You must accept Terms and Conditions"),
-    pineapple: yup
-        .boolean()
-        .oneOf([true], "You must accept Terms and Conditions"),
-    bacon: yup
-        .boolean()
-        .oneOf([true], "You must accept Terms and Conditions"),
-    instructions: yup
-        .string()
+    // pepperoni: yup
+    //     .boolean()
+    //     .oneOf([true], "You must accept Terms and Conditions"),
+    // olives: yup
+    //     .boolean()
+    //     .oneOf([true], "You must accept Terms and Conditions"),
+    // pineapple: yup
+    //     .boolean()
+    //     .oneOf([true], "You must accept Terms and Conditions"),
+    // bacon: yup
+    //     .boolean()
+    //     .oneOf([true], "You must accept Terms and Conditions"),
+    // instructions: yup
+    //     .string()
 
 })
 

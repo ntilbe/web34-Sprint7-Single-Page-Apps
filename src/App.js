@@ -22,12 +22,15 @@ const initialFormErrors = {
 
 const initialOrders = []
 
+const initialDisabled = true
+
 const App = () => {
 
   //State//
   const [orders, setOrders] = useState(initialOrders)
   const [formValues, setFormValues] = useState(initialFormValues)
   const [formErrors, setFormErrors] = useState(initialFormErrors)
+  const [disabled, setDisabled] = useState(initialDisabled)
 
   const addOrder = newOrder => {
     setOrders(newOrder)
@@ -76,9 +79,14 @@ const App = () => {
       bacon: formValues.bacon,
       instructions: formValues.instructions
     }
-
     addOrder(newOrder)
   }
+
+  useEffect(() => {
+    FormSchema.isValid(formValues).then(valid => {
+      setDisabled(!valid)
+    })
+  }, [formValues])
 
   return (
     <div>
@@ -94,6 +102,7 @@ const App = () => {
           submit={submit}
           inputChange={inputChange}
           checkboxChange={checkboxChange}
+          disabled={disabled}
           formErrors={formErrors}
           />
         </Route>
